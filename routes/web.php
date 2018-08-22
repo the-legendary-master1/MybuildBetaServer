@@ -14,3 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+/*AUTHINTICATION*/
+$router->post('/login', 'AuthController@login');
+$router->get('/logout', 'AuthController@logout');
+
+/*SIDEBARS*/
+$router->post('/sidebar', 'AdminDataController@sidebar');

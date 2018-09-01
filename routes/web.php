@@ -19,5 +19,12 @@ $router->get('/', function () use ($router) {
 $router->post('/login', 'AuthController@login');
 $router->get('/logout', 'AuthController@logout');
 
-/*SIDEBARS*/
+/*Data*/
 $router->post('/sidebar', 'AdminDataController@sidebar');
+$router->post('/home', 'AdminDataController@home');
+$router->post('/logos', 'AdminDataController@logos');
+$router->post('/seo', 'AdminDataController@seo');
+$router->post('/subscribe', 'AdminDataController@subscribe');
+$router->post('/header_footer', 'AdminDataController@header_footer');
+$router->post('/custom-design-forms', 'AdminDataController@custom_design_forms');
+$router->post('/slider', 'AdminDataController@slider');

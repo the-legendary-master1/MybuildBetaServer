@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSidebarsTable extends Migration
+class CreatePageChildsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateSidebarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sidebars', function (Blueprint $table) {
+        Schema::create('page_childs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('parent_name');
-            $table->integer('type');
-            $table->string('name');
-            $table->string('icon');
+            $table->string('parent_name');
+            $table->string('parent_type');
+            $table->integer('child_id');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateSidebarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sidebars');
+        Schema::dropIfExists('page_childs');
     }
 }
